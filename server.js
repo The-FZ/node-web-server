@@ -43,13 +43,19 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageTitle: 'Abouut Page',
+    pageTitle: 'About Page',
   });
 });
 
 app.get('/bad', (req, res) => {
   res.send({
     error: 'error handling request'
+  })
+})
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageHeading: 'Portfolio page here'
   })
 })
 
